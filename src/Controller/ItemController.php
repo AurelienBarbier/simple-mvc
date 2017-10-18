@@ -8,6 +8,8 @@
 
 namespace Controller;
 
+use Symfony\Component\Form\Forms;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class ItemController extends AbstractController
 {
@@ -30,5 +32,17 @@ class ItemController extends AbstractController
     public function details($id){
 
         return $this->_twig->render('Item/details.html.twig', ['foo' => 'Item number ' . $id]);
+    }
+
+    public function add(){
+
+        $formFactory = Forms::createFormFactory();
+
+        $form = $formFactory->createBuilder()
+            ->add('name', TextType::class)
+            ->getForm();
+
+        return $this->_twig->render('Item/add.html.twig', ['form' => $form]);
+
     }
 }

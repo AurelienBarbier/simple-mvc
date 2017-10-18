@@ -10,7 +10,8 @@
     "minimum-stability": "stable",
     "require": {
         "nikic/fast-route": "^1.2",
-        "twig/twig": "^2.4"
+        "twig/twig": "^2.4",
+        "symfony/form": "^3.3"
     },
     "autoload": {
         "psr-4": {
