@@ -2,5 +2,8 @@
 
 {% block content %}
     <p>Details {{ foo }}</p>
-    {{ dump(form) }}
+    {{ form_start(form) }}
+    {{ form_widget(form.name) }}
+    <input type="submit" />
+    {{ form_end(form) }}
 {% endblock %}

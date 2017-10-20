@@ -36,13 +36,18 @@ class ItemController extends AbstractController
 
     public function add(){
 
-        $formFactory = Forms::createFormFactory();
+
+        var_dump($_POST);
+
+        // create your form factory as normal
+        $formFactory = Forms::createFormFactoryBuilder()->getFormFactory();
+
 
         $form = $formFactory->createBuilder()
             ->add('name', TextType::class)
             ->getForm();
 
-        return $this->_twig->render('Item/add.html.twig', ['form' => $form]);
+        return $this->_twig->render('Item/add.html.twig', ['form' => $form->createView()]);
 
     }
 }
