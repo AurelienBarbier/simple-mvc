@@ -1,0 +1,10 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Movie {{ movie.title }}</h1>
+    <p>{{ movie.id }}. {{ movie.title }}</p>
+    <p>{{ movie.year }}</p>
+    <p>{{ movie.director }}</p>
+    <a href="/movie/edit/{{ movie.id }}">Edit</a>
+    <a href="/">Back</a>
+{% endblock %}

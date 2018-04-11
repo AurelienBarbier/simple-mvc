@@ -1,0 +1,21 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/index.css">
+{% endblock %}
+
+{% block content %}
+  Hello to you !
+  <a href="/movies">Voir les films</a>
+  <a href="/directors">Voir les réals</a>
+{% endblock %}
+
+
+
+{% block javascript %}
+  {{ parent() }}
+<script>
+  alert('index');
+</script>
+{% endblock %}

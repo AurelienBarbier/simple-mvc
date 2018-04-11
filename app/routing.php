@@ -10,10 +10,19 @@
  */
 
 $routes = [
-    'Item' => [ // Controller
-        ['index', '/', 'GET'], // action, url, method
-        ['add', '/item/add', 'GET'], // action, url, method
-        ['edit', '/item/edit/{id:\d+}', 'GET'], // action, url, method
-        ['show', '/item/{id:\d+}', 'GET'], // action, url, method
+    'Home' => [
+      ['index', '/', 'GET'], // action, url, method
+    ],
+    'Movie' => [ // Controller
+        ['index', '/movies', 'GET'], // action, url, method
+        ['add', '/movie/add', ['POST', 'GET']], // action, url, method
+        ['edit', '/movie/edit/{id:\d+}', 'GET'], // action, url, method
+        ['show', '/movie/{id:\d+}', 'GET'], // action, url, method
+    ],
+    'Director' => [ // Controller
+        ['index', '/directors', 'GET'], // action, url, method
+        ['add', '/director/add', 'GET'], // action, url, method
+        ['edit', '/director/edit/{id:\d+}', 'GET'], // action, url, method
+        ['show', '/director/{id:\d+}', 'GET'], // action, url, method
     ],
 ];
